@@ -42,7 +42,7 @@ namespace TiredCallouts
         private static void RegisterCallout()
         {
             LSPD_First_Response.Mod.API.Functions.RegisterCallout(typeof(Callouts.VeryFastChase));
-            LSPD_First_Response.Mod.API.Functions.RegisterCallout(typeof(Callouts.ArmedDrunk));
+            LSPD_First_Response.Mod.API.Functions.RegisterCallout(typeof(Callouts.ArmedDrunkBasic));
         }
 
 
