@@ -143,7 +143,6 @@ namespace TiredCallouts.Callouts
                             break;
 
                         case 6:
-                            Game.DisplayHelp("DEBUG: Deciding random outcome");
                             Random random = new Random();
                             int outcome = random.Next(1, 4);
                             if (outcome == 1)
