@@ -8,6 +8,7 @@ using LSPD_First_Response.Mod.API;
 using LSPD_First_Response.Mod.Callouts;
 using System.Drawing;
 using StopThePed.API;
+using LSPD_First_Response.Engine;
 
 namespace TiredCallouts.Callouts
 {
@@ -16,11 +17,15 @@ namespace TiredCallouts.Callouts
     {
         private Ped Suspect;
 
+        private Blip SearchBlip;
+
         private Blip SuspectBlip;
 
         private LHandle Pursuit;
 
         private Vector3 SpawnPoint;
+
+        private Vector3 searcharea;
 
         private bool OutcomeDecided = false;
 
@@ -65,8 +70,11 @@ namespace TiredCallouts.Callouts
             Suspect.Tasks.PlayAnimation("amb@world_human_bum_standing@drunk@idle_a", "idle_a", 1f, AnimationFlags.Loop);
 
 
-            SuspectBlip = Suspect.AttachBlip();
-            SuspectBlip.Color = Color.Yellow;
+            searcharea = SpawnPoint.Around2D(1f, 2f);
+            SearchBlip = new Blip(searcharea, 80f);
+            SearchBlip.Color = Color.Yellow;
+            SearchBlip.EnableRoute(Color.Yellow);
+            SearchBlip.Alpha = 0.5f;
 
             return base.OnCalloutAccepted();
         }
@@ -78,8 +86,12 @@ namespace TiredCallouts.Callouts
             if (StillBlipped && Game.LocalPlayer.Character.DistanceTo(Suspect) < 30f)
             {
                 OutcomeDecided = false;
-                StillBlipped = true;
-                if (SuspectBlip.Exists()) SuspectBlip.Delete();
+                if (SearchBlip.Exists())
+                {
+                    SearchBlip.Delete();
+                    SuspectBlip = Suspect.AttachBlip();
+                    SuspectBlip.Color = System.Drawing.Color.Yellow;
+                }
                 StillBlipped = false;
             }
 
@@ -96,26 +108,9 @@ namespace TiredCallouts.Callouts
                         Random random = new Random();
                         int DialogueSet = random.Next(1, 5);
 
-                        if (DialogueSet == 1)
-                        {
-                            set = "Set1";
-                        }
-                        else if (DialogueSet == 2)
-                        {
-                            set = "Set2";
-                        }
-                        else if (DialogueSet == 3)
-                        {
-                            set = "Set3";
-                        }
-                        else if (DialogueSet == 4)
-                        {
-                            set = "Set4";
-                        }
-                        else
-                        {
-                            set = "Set1";
-                        }
+                        Game.LogTrivial("Set"+ DialogueSet.ToString());
+
+                        set = "Set" + DialogueSet.ToString();
 
                         SetDecided = true;
                     }
@@ -152,6 +147,7 @@ namespace TiredCallouts.Callouts
                             {
                                 Game.DisplaySubtitle(DialogueLoader.Instance.GetDialogue("ArmedDrunkBasic", set, 7));
                                 Suspect.Tasks.FightAgainst(Game.LocalPlayer.Character);
+                                SuspectBlip.Color = System.Drawing.Color.Red;
                             }
                             else if (outcome == 2)
                             {
@@ -159,6 +155,7 @@ namespace TiredCallouts.Callouts
                                 Pursuit = LSPD_First_Response.Mod.API.Functions.CreatePursuit();
                                 LSPD_First_Response.Mod.API.Functions.AddPedToPursuit(Pursuit, Suspect);
                                 LSPD_First_Response.Mod.API.Functions.SetPursuitIsActiveForPlayer(Pursuit, true);
+                                if (SuspectBlip.Exists()) SuspectBlip.Delete();
                             }
 
                             else
@@ -191,6 +188,7 @@ namespace TiredCallouts.Callouts
 
             if (Suspect.Exists()) Suspect.Dismiss();
             if (SuspectBlip.Exists()) SuspectBlip.Delete();
+            if (SearchBlip.Exists()) SearchBlip.Delete();
         }
 
     }
