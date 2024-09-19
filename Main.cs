@@ -43,6 +43,7 @@ namespace TiredCallouts
         {
             LSPD_First_Response.Mod.API.Functions.RegisterCallout(typeof(Callouts.VeryFastChase));
             LSPD_First_Response.Mod.API.Functions.RegisterCallout(typeof(Callouts.ArmedDrunkBasic));
+            LSPD_First_Response.Mod.API.Functions.RegisterCallout(typeof(Callouts.OfficerWelfareCheck));
         }
 
 
