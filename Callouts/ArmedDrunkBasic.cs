@@ -76,6 +76,9 @@ namespace TiredCallouts.Callouts
             SearchBlip.EnableRoute(Color.Yellow);
             SearchBlip.Alpha = 0.5f;
 
+            Game.DisplayNotification("~b~Dispatch: ~w~911 caller reports a ~y~possibly intoxicated person ~r~brandishing a firearm.");
+            Game.DisplayHelp("Search the area in the ~y~yellow circle~w~ for the subject.");
+
             return base.OnCalloutAccepted();
         }
 
