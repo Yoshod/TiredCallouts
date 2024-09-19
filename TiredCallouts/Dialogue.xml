@@ -2,44 +2,44 @@
 <Dialogues>
 	<ArmedDrunkBasic>
 		<Set1>
-			<Line id="1">Officer: Excuse me, you can't have that gun on you right now.</Line>
-			<Line id="2">Suspect: Why? It's my God given right!</Line>
-			<Line id="3">Officer: I have reason to believe you might be intoxicated.</Line>
-			<Line id="4">Suspect: I'm not drunk, I'm just tired.</Line>
-			<Line id="5">Officer: I'm going to have to ask you to put the gun down and come with me.</Line>
-			<Outcome id="7">Suspect: I'll put that gun down over my dead body!</Outcome>
-			<Outcome id="8">Suspect: I ain't going anywhere with you, pig!</Outcome>
-			<Outcome id="9">Suspect: Fine, I'll put the gun down.</Outcome>
+			<Line id="1">~b~Officer: ~w~Excuse me, you can't have that gun on you right now.</Line>
+			<Line id="2">~y~Subject: ~w~Why? It's my God given right!</Line>
+			<Line id="3">~b~Officer: ~w~I have reason to believe you might be intoxicated.</Line>
+			<Line id="4">~y~Subject: ~w~I'm not drunk, I'm just tired.</Line>
+			<Line id="5">~b~Officer: ~w~I'm going to have to ask you to put the gun down and come with me.</Line>
+			<Outcome id="7">~r~Subject: ~w~I'll put that gun down over my dead body!</Outcome>
+			<Outcome id="8">~r~Subject: ~w~I ain't going anywhere with you, pig!</Outcome>
+			<Outcome id="9">~y~Subject: ~w~Fine, I'll put the gun down.</Outcome>
 		</Set1>
 		<Set2>
-			<Line id="1">Officer: Excuse me, you can't have that gun on you right now.</Line>
-			<Line id="2">Suspect: I'm not doing anything wrong, officer. I have a right to protect myself.</Line>
-			<Line id="3">Officer: That doesn't mean you can carry a gun while intoxicated.</Line>
-			<Line id="4">Suspect: I've had one, maybe two, beers. I'm fine, officer.</Line>
-			<Line id="5">Officer: Let's not make this difficult. Put the gun down and come with me.</Line>
-			<Outcome id="7">Suspect: You can't take my gun away from me!</Outcome>
-			<Outcome id="8">Suspect: I'm not going to jail for having a drink!</Outcome>
-			<Outcome id="9">Suspect: Alright, but a lawsuit is coming your way after this!</Outcome>
+			<Line id="1">~b~Officer: ~w~Excuse me, you can't have that gun on you right now.</Line>
+			<Line id="2">~y~Subject: ~w~I'm not doing anything wrong, Officer. I have a right to protect myself.</Line>
+			<Line id="3">~b~Officer: ~w~That doesn't mean you can carry a gun while intoxicated.</Line>
+			<Line id="4">~y~Subject: ~w~I've had one, maybe two beers. I'm fine, Officer.</Line>
+			<Line id="5">~b~Officer: ~w~Let's not make this difficult. Put the gun down and come with me.</Line>
+			<Outcome id="7">~r~Subject: ~w~You can't take my gun away from me!</Outcome>
+			<Outcome id="8">~r~Subject: ~w~I'm not going to jail for having a drink!</Outcome>
+			<Outcome id="9">~y~Subject: ~w~Alright, but a lawsuit is coming your way after this!</Outcome>
 		</Set2>
 		<Set3>
-			<Line id="1">Officer: I need you to put that gun down, you're clearly drunk.</Line>
-			<Line id="2">Suspect: Who said I’m drunk? I'm just walking home!</Line>
-			<Line id="3">Officer: You're stumbling home at best, and you're armed.</Line>
-			<Line id="4">Suspect: I have my rights. The Second Amendment protects me!</Line>
-			<Line id="5">Officer: Not while you’re intoxicated. Please put the gun down.</Line>
-			<Outcome id="7">Suspect: You’ll have to fight me for it!</Outcome>
-			<Outcome id="8">Suspect: Catch me if you can!</Outcome>
-			<Outcome id="9">Suspect: Alright, I’m putting it down. Don’t shoot!</Outcome>
+			<Line id="1">~b~Officer: ~w~I need you to put that gun down, you're clearly drunk.</Line>
+			<Line id="2">~y~Subject: ~w~Who said I’m drunk? I'm just walking home!</Line>
+			<Line id="3">~b~Officer: ~w~You're stumbling home at best, and you're armed.</Line>
+			<Line id="4">~y~Subject: ~w~I have my rights. The Second Amendment protects me!</Line>
+			<Line id="5">~b~Officer: ~w~Not while you’re intoxicated. Please put the gun down.</Line>
+			<Outcome id="7">~r~Subject: ~w~You’ll have to fight me for it!</Outcome>
+			<Outcome id="8">~r~Subject: ~w~Catch me if you can!</Outcome>
+			<Outcome id="9">~y~Subject: ~w~Alright, I’m putting it down. Don’t shoot!</Outcome>
 		</Set3>
 		<Set4>
-			<Line id="1">Officer: *whistles* Hey! You can’t carry that weapon while you're drunk!</Line>
-			<Line id="2">Suspect: Fuck, no need to be so loud. Just leave me alone.</Line>
-			<Line id="3">Officer: Don't be difficult, put the gun down.</Line>
-			<Line id="4">Suspect: I said leave me the fuck alone! I don't wanna talk to you, pig!</Line>
-			<Line id="5">Officer: Don't make this harder than it needs to be.</Line>
-			<Outcome id="7">Suspect: Back off, or I’ll use it!</Outcome>
-			<Outcome id="8">Suspect: I’m not sticking around for this!</Outcome>
-			<Outcome id="9">Suspect: Alright, alright. I’m done.</Outcome>
+			<Line id="1">~b~Officer: ~w~*whistles* Hey! You can’t carry that weapon while you're drunk!</Line>
+			<Line id="2">~y~Subject: ~w~Fuck, no need to be so loud. Just leave me alone.</Line>
+			<Line id="3">~b~Officer: ~w~Don't be difficult, put the gun down.</Line>
+			<Line id="4">~y~Subject: ~w~I said leave me the fuck alone! I don't wanna talk to you, pig!</Line>
+			<Line id="5">~b~Officer: ~w~Don't make this harder than it needs to be.</Line>
+			<Outcome id="7">~r~Subject: ~w~Back off, or I’ll use it!</Outcome>
+			<Outcome id="8">~r~Subject: ~w~I’m not sticking around for this!</Outcome>
+			<Outcome id="9">~y~Subject: ~w~Alright, alright. I’m done.</Outcome>
 		</Set4>
 	</ArmedDrunkBasic>
 </Dialogues>
