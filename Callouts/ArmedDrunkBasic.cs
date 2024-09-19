@@ -175,6 +175,12 @@ namespace TiredCallouts.Callouts
 
             if (Suspect.IsDead || !Suspect.Exists() || Suspect.IsCuffed || Game.LocalPlayer.IsDead)
             {
+
+                if (Suspect.IsCuffed && Suspect.Inventory.HasLoadedWeapon)
+                {
+                    Suspect.Metadata.searchPed = "~r~handgun~s~";
+                }
+
                 Game.LogTrivial("ArmedDrunk: Suspect is dead, not existing, cuffed or player is dead. Ending callout.");
                 End();
             }
