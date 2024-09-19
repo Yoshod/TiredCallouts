@@ -152,6 +152,7 @@ namespace TiredCallouts.Callouts
                             else if (outcome == 2)
                             {
                                 Game.DisplaySubtitle(DialogueLoader.Instance.GetDialogue("ArmedDrunkBasic", set, 8));
+                                Suspect.Tasks.Clear();
                                 Pursuit = LSPD_First_Response.Mod.API.Functions.CreatePursuit();
                                 LSPD_First_Response.Mod.API.Functions.AddPedToPursuit(Pursuit, Suspect);
                                 LSPD_First_Response.Mod.API.Functions.SetPursuitIsActiveForPlayer(Pursuit, true);
@@ -173,6 +174,12 @@ namespace TiredCallouts.Callouts
             if (Suspect.IsDead || !Suspect.Exists() || Suspect.IsCuffed || Game.LocalPlayer.IsDead)
             {
                 Game.LogTrivial("ArmedDrunk: Suspect is dead, not existing, cuffed or player is dead. Ending callout.");
+                End();
+            }
+
+            if (Game.IsKeyDown(System.Windows.Forms.Keys.End))
+            {
+                Game.LogTrivial("ArmedDrunk: Ending callout by key press.");
                 End();
             }
 
